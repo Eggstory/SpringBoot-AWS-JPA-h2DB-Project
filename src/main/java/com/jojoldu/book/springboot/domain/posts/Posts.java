@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.jojoldu.book.springboot.domain.BaseTimeEntity;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Getter							// 대신 목적과 의도를 나타낼수 있는 메소드를 추가해줘야함 (setstatus() x  / cancelOrder() o).
 @NoArgsConstructor				// 기본생성자 자동추가 : public Posts() {} 와 같은 효과.
 @Entity							// 테이블과 링크될 클래스.
-public class Posts {
+public class Posts extends BaseTimeEntity {
 	
 	@Id							// Primary Key(PK).
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	//PK 생성규칙 , GenerationType.IDENTITY => auto_increment.
