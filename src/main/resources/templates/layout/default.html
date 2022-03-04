@@ -2,8 +2,18 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-	<!-- config fragment 사용 -->
-	<head th:replace="fragment/config :: configFragment"></head>
+<!--configFragment 선언-->
+<head>
+	<meta charset="UTF-8" />
+	<!-- css library를 선언한다. -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- js library를 선언한다. -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/app/index.js"></script>
+
+</head>
 
 	<!-- header fragment 사용 -->
 	<header th:replace="fragment/header :: headerFragment"></header>
