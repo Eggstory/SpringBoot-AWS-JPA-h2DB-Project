@@ -3,6 +3,7 @@
  */
 
 var main = {
+
 	init : function() {
 		var _this = this;
 		$('#btn-save').on('click', function() {
@@ -19,16 +20,25 @@ var main = {
 		$.ajax({
 			type : 'POST',
 			url : '/api/v1/posts',
-			dataType : 'json',
+			dataType : 'JSON',
 			contentType : 'application/json; charset=utf-8',
-			data : JSON.stringify(data)
+			data : JSON.stringify(data) ,
 		}).done(function() {
 			alert('success');
 			window.location.href = '/';
 		}).fail(function(error) {
 			alert(JSON.stringify(error));
+//			success : function() {
+//				alert('로그인 성공');
+//				window.location.href = '/';
+//			},
+//			error : function() {
+//				alert('로그인 정보가 올바르지 않습니다.');
+//			}
 		});
 	}
 };
 
 main.init();
+
+

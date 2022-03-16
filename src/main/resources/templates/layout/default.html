@@ -9,19 +9,18 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 	<!-- js library를 선언한다. -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="/js/app/index.js"></script>
-
+	<script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script defer type="text/javascript" src="/js/app/index.js"></script>
 </head>
-
-	<!-- header fragment 사용 -->
-	<header th:replace="fragment/header :: headerFragment"></header>
+<body>
+<!-- header fragment 사용 -->
+	<th:block th:replace="fragment/header :: headerFragment"></th:block>
 
 	<!-- content fragment 사용 / 현재 layout을 사용하는 content fragment의 내용을 삽입한다. -->
-	<div layout:fragment="content"></div>
+	<th:block layout:fragment="content"></th:block>
 
 	<!-- footer fragment 사용 -->
-	<footer th:replace="fragment/footer :: footerFragment"></footer>
-
+	<th:block th:replace="fragment/footer :: footerFragment"></th:block>
+</body>
 </html>
