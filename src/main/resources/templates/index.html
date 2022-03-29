@@ -22,14 +22,17 @@
 				<th>제목</th>
 				<th>작성자</th>
 				<th>최종수정일</th>
+				<th>수정하기<th>
 			</tr>
 		</thead>
 		<tbody id="tbody">
 			<tr th:each="PostsListResponseDto : ${posts}">
-				<td th:text="${PostsListResponseDto.id}" />
+				<td th:text="${PostsListResponseDto.id}"></td>
 				<td th:text="${PostsListResponseDto.title}" />
 				<td th:text="${PostsListResponseDto.author}" />
 				<td th:text="${PostsListResponseDto.modifiedDate}" />
+				<td><a th:href="@{/posts/update/{id}(id=${PostsListResponseDto.id})}" 
+				role="button" class="btn btn-primary">수정하기</a><td>
 			</tr>
 		</tbody>
 	</table>
